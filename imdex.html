@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Map Clone</title>
+
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+     <!-- MapBox cdn -->
+     <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+     <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+     <script
+          src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+     <link rel="stylesheet"
+          href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+          type="text/css" />
+
+
+     <!-- Custom css -->
+     <link rel="stylesheet" href="./style.css" />
+
+</head>
+
+<body>
+     <div class="d-flex bg-dark" id="wrapper">
+
+          <!-- Sidebar -->
+          <div class="bg-dark " id="sidebar-wrapper">
+               <div class="sidebar-heading text-white">Google Map </div>
+               <div id="menu" class=" list-group list-group-flush bg-dark">
+                    <button id="light-v10" class="list-group-item list-group-item-action bg-dark text-white">Light
+                         View</button>
+                    <button id="dark-v10" class="list-group-item list-group-item-action bg-dark text-white">Dark
+                         View</button>
+                    <button id="outdoors-v11" class="list-group-item list-group-item-action bg-dark text-white">Outdoor
+                         View</button>
+                    <button id="satellite-v9"
+                         class="list-group-item list-group-item-action bg-dark text-white">Satellite View</button>
+               </div>
+          </div>
+          <!-- /#sidebar-wrapper -->
+
+          <!-- Page Content -->
+          <div id="page-content-wrapper">
+
+               <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+                    <img id="menu-toggle" width="28px" height="28px" src="./menu.svg" />
+               </nav>
+               <div class="container-fluid">
+                    <div id='map'></div>
+               </div>
+          </div>
+          <!-- /#page-content-wrapper -->
+
+     </div>
+     <!-- /#wrapper -->
+
+     <!-- Menu Toggle Script -->
+
+
+
+     <script src="./script.js"></script>
+
+
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+     <script>
+          $("#menu-toggle").click(function (e) {
+               e.preventDefault();
+               $("#wrapper").toggleClass("toggled");
+          });
+     </script>
+</body>
+
+</html>
