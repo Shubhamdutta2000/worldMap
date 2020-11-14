@@ -13,12 +13,13 @@ map.addControl(
                enableHighAccuracy: true
           },
           trackUserLocation: true
-     })
+     }),
+     "bottom-left"
 );
 
 
 // Add zoom and rotation controls to the map.
-map.addControl(new mapboxgl.NavigationControl());
+map.addControl(new mapboxgl.NavigationControl(), "bottom-left");
 
 // driving direction
 map.addControl(
